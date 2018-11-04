@@ -1,0 +1,42 @@
+h1, h2, h3, p {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+body {
+  margin: 0 auto;
+  /* background-color: #FF9500; */
+  padding: 0 20px 20px 20px;
+  width: 800px;
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+h1, h3, p {
+  margin: 0;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+}
+
+.item {
+  width: 150px;
+  height: 100px;
+  padding: 10px;
+  margin: 5px;
+  background: #FFBD33;
+  text-align: center;
+  color: #388AA0;
+  font-size: 2em;
+  line-height: 100px;
+  border: none;
+}
+
+.item:hover {
+  color: black;
+  cursor: pointer;
+  border: 1px solid lightgray;
+}
