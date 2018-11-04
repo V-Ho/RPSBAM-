@@ -10,14 +10,18 @@
 </head>
 <body>
   <h1>Rock Paper Scissors Game</h1>
-  <h3>Rules of the Game: Player Chooses Rock, Paper or Scissors - best of 3 rounds wins</h3>
+  <h3>Rules of the Game:
+    <br>
+    Player Chooses Rock, Paper or Scissors - best of 3 rounds wins
+  </h3>
   <div class="box">
     <div class="item" id="rock" onClick="getPlayerId(this)">Rock</div>
     <div class="item" id="paper" onClick="getPlayerId(this)">Paper</div>
     <div class="item" id="scissors" onClick="getPlayerId(this)" >Scissors</div>
   </div>
 
-  <h3 id="result"></h3>
+  <h3 id="display-choices"></h3>
+  <h3 id="display-result"></h3>
 
   <p>Game inspired by <a href="https://www.theodinproject.com/courses/web-development-101/lessons/rock-paper-scissors?ref=lnav">Odin</a></p>
   <script src="./main.js"></script>
