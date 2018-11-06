@@ -1,4 +1,4 @@
-!<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8" />
@@ -19,8 +19,23 @@
     <div class="item" id="paper" onClick="getPlayerId(this)">Paper</div>
     <div class="item" id="scissors" onClick="getPlayerId(this)" >Scissors</div>
   </div>
-
-  <h3 id="display-choices"></h3>
+<div class="display">
+    <div><h3 class="display-row" id="display-round">Round 1</h3></div>
+    <div><h3 class="display-row" id="display-choices"></h3></div>
+</div>
+  <div class="scoreboard">
+    <div class="scores" id="no-color">
+      <h4>Scoreboard</h4>
+    </div>
+    <div class="scores" id="player-score">
+      <h4 class="score-title">Player Score</h4>
+      <h4 class="score-total" id="player-score-total">0</h4>
+    </div>
+    <div class="scores" id="comp-score">
+      <h4 class="score-title">Computer Score</h4>
+      <h4 class="score-total" id="comp-score-total">0</h4>
+    </div>
+  </div>
   <h3 id="display-result"></h3>
 
   <p>Game inspired by <a href="https://www.theodinproject.com/courses/web-development-101/lessons/rock-paper-scissors?ref=lnav">Odin</a></p>

@@ -1,3 +1,27 @@
+let playerScore = 0
+let compScore = 0
+let round = 1
+
+// set Score
+// const setScore = () => {
+//   if res
+// }
+
+const restart = () => {
+  playerScore = 0
+  compScore = 0
+}
+
+const checkScore = () => {
+  let finalRes
+  if (playerScore >= 3) {
+    finalRes = 'Player is the WINNER!'
+  } else if (compScore >= 3) {
+    finalRes = 'Computer is the WINNER'
+  }
+  document.getElementById('display-result').textContent = finalRes
+  restart()
+}
 
 const playRound = (playerSelect, compSelect) => {
   let res
@@ -6,21 +30,41 @@ const playRound = (playerSelect, compSelect) => {
   document.getElementById('display-choices').textContent = headerRes
 
   if (playerSelect === 'rock' && compSelect === 'scissors') {
-    res = 'Player wins!'
+    res = 'Player wins this round!'
   } else if (playerSelect === 'scissors' && compSelect === 'rock') {
-    res = 'Computer wins!'
+    res = 'Computer wins this round!'
   } else if (playerSelect === 'scissors' && compSelect === 'paper') {
-    res = 'Player wins!'
+    res = 'Player wins this round!'
   } else if (playerSelect === 'paper' && compSelect === 'rock') {
-    res = 'Player wins'
+    res = 'Player wins this round!'
   } else if (playerSelect === 'rock' && compSelect === 'paper') {
-    res = 'Computer wins!'
+    res = 'Computer wins this round!'
   } else if (playerSelect === 'paper' && compSelect === 'scissors') {
-    res = 'Computer wins!'
+    res = 'Computer wins this round!'
   } else {
     res = 'It\'s a tie!'
   }
-  document.getElementById('display-result').textContent = res
+
+  // update scoreboard
+  switch (res) {
+    case 'Player wins this round!' :
+      playerScore++
+      console.log('playerscore', playerScore)
+      document.getElementById('player-score-total').textContent = playerScore
+      round++
+      document.getElementById('display-round').textContent = `Round ${round}:`
+      break
+    case 'Computer wins this round!':
+      compScore++
+      console.log('compscore', compScore)
+      document.getElementById('comp-score-total').textContent = compScore
+      round++
+      document.getElementById('display-round').textContent = `Round ${round}:`
+      break
+  }
+  checkScore()
+
+  // document.getElementById('display-result').textContent = res
 }
 
 // options for computer:
