@@ -12,7 +12,7 @@
   <h1>Rock Paper Scissors Game</h1>
   <h3>Rules of the Game:
     <br>
-    Player Chooses Rock, Paper or Scissors - best of 3 rounds wins
+    Player Chooses Rock, Paper or Scissors - first to score 3 wins
   </h3>
   <div class="box">
     <div class="item" id="rock" onClick="getPlayerId(this)">Rock</div>
@@ -20,12 +20,11 @@
     <div class="item" id="scissors" onClick="getPlayerId(this)" >Scissors</div>
   </div>
 <div class="display">
-    <div><h3 class="display-row" id="display-round">Round 1</h3></div>
-    <div><h3 class="display-row" id="display-choices"></h3></div>
+    <h3 class="display-row" id="display-choices"></h3>
 </div>
   <div class="scoreboard">
     <div class="scores" id="no-color">
-      <h4>Scoreboard</h4>
+      <h3 class="display-row" id="display-round">Round 1</h3>
     </div>
     <div class="scores" id="player-score">
       <h4 class="score-title">Player Score</h4>

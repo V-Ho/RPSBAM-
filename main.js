@@ -2,25 +2,17 @@ let playerScore = 0
 let compScore = 0
 let round = 1
 
-// set Score
-// const setScore = () => {
-//   if res
-// }
-
-const restart = () => {
-  playerScore = 0
-  compScore = 0
-}
-
 const checkScore = () => {
   let finalRes
   if (playerScore >= 3) {
     finalRes = 'Player is the WINNER!'
+    document.getElementById('display-round').textContent = ''
   } else if (compScore >= 3) {
     finalRes = 'Computer is the WINNER'
+    document.getElementById('display-round').textContent = ''
   }
   document.getElementById('display-result').textContent = finalRes
-  restart()
+  // restart()
 }
 
 const playRound = (playerSelect, compSelect) => {
